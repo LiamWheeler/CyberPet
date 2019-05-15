@@ -70,15 +70,12 @@ namespace CyberPet
                     else throw new ArgumentException();
                 }
 
-
-
                 catch (ArgumentException)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Unexpected input, try either 'feed', 'play' or 'sleep'.");
                     Console.ResetColor();
                 }
-
             }
                 Console.ReadLine();          
         }    

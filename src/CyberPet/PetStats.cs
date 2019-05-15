@@ -52,7 +52,7 @@ namespace CyberPet
                 Console.WriteLine("Happiness: " + happy);
                 Console.ResetColor();
             }
-            else if (happy == 2)
+            else if (happy <= 2)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Happiness: " + happy);

@@ -1,0 +1,11 @@
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\bin\Debug\netcoreapp2.2\CyberPet.deps.json
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\bin\Debug\netcoreapp2.2\CyberPet.runtimeconfig.json
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\bin\Debug\netcoreapp2.2\CyberPet.runtimeconfig.dev.json
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\bin\Debug\netcoreapp2.2\CyberPet.dll
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\bin\Debug\netcoreapp2.2\CyberPet.pdb
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\obj\Debug\netcoreapp2.2\CyberPet.csprojAssemblyReference.cache
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\obj\Debug\netcoreapp2.2\CyberPet.csproj.CoreCompileInputs.cache
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\obj\Debug\netcoreapp2.2\CyberPet.AssemblyInfoInputs.cache
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\obj\Debug\netcoreapp2.2\CyberPet.AssemblyInfo.cs
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\obj\Debug\netcoreapp2.2\CyberPet.dll
+C:\Users\CodeNation\Liam\cyberpet\src\CyberPet\obj\Debug\netcoreapp2.2\CyberPet.pdb

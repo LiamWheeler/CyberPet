@@ -35,15 +35,9 @@ namespace CyberPet
 
 
             while (true)
-            {
-                
-
-                
-
-
+            {             
                     Console.WriteLine("Feed or Play with " + myPet.name + " or let them sleep");
-                    Console.WriteLine(myPet.name + "'s stats" +"\r\nEnergy: " + myPet.energy
-                                    + "\r\nHunger: " + myPet.hunger + "\r\nHappiness: " + myPet.happy);
+                    myPet.PetStats();
                     Console.WriteLine("Or press 'q' to quit");
                     var input = Console.ReadLine();
 

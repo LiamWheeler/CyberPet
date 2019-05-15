@@ -6,6 +6,7 @@ namespace CyberPet
     public class Program
     {
         public static PetCharacter myPet = new PetCharacter();
+        public static PetStats petEmotion = new PetStats();
         private static bool invalidName = true;
 
         static void Main(string[] args)
@@ -37,7 +38,8 @@ namespace CyberPet
             while (true)
             {             
                     Console.WriteLine("Feed or Play with " + myPet.name + " or let them sleep");
-                    myPet.PetStats();
+                    Console.WriteLine(myPet.name + "'s stats");
+                    petEmotion.PetStatistics();
                     Console.WriteLine("Or press 'q' to quit");
                     var input = Console.ReadLine();
 

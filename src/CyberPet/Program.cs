@@ -5,23 +5,61 @@ namespace CyberPet
 {
     public class Program
     {
-        public static PetCharacter myPet = new PetCharacter();
-        public static PetStats petEmotion = new PetStats();
+        public static IPet myPet;
+        public static PetStats petEmotion = new PetStats(myPet);
         private static bool invalidName = true;
 
         static void Main(string[] args)
         {
+            var hasType = false;
+            while (!hasType) {
+                try
+                {
+
+                    Console.WriteLine("Choose your species of cyberpet.(dog/honey badger)");
+                    string species = Console.ReadLine();
+                    if (species == "dog")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Congratulations on your new dog");
+                        myPet = new Dog();
+                        Console.ResetColor();
+                        hasType = true;
+                    }
+                    else if (species == "honey badger")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Congratulations on your new honey badger");
+                        myPet = new HoneyBadger();
+                        Console.ResetColor();
+                        hasType = true;
+                    }
+                    else throw new ArgumentException();
+                }
+
+                catch (ArgumentException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("invalid input,");
+                    Console.ResetColor();
+                }
+            
+
+
+            }
+
+
             while (invalidName == true)
             {
                 try
                 {
-                    Console.WriteLine("What would you like to name your new cyberpet.");
+                    Console.WriteLine("What would you like to name your new cyberpet");
                     string userName = Console.ReadLine();
                     if (!string.IsNullOrWhiteSpace(userName))
                     {
-                        myPet.name = userName.First().ToString().ToUpper() + userName.Substring(1);
+                        myPet.Name = userName.First().ToString().ToUpper() + userName.Substring(1);
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("Congratulations, your new pet is called " + myPet.name);
+                        Console.WriteLine("Congratulations, your new pet is called " + myPet.Name);
                         Console.ResetColor();
                         invalidName = false;
                     }
@@ -37,8 +75,8 @@ namespace CyberPet
 
             while (true)
             {             
-                    Console.WriteLine("Feed or Play with " + myPet.name + " or let them sleep");
-                    Console.WriteLine(myPet.name + "'s stats");
+                    Console.WriteLine("Feed or Play with " + myPet.Name + " or let them sleep");
+                    Console.WriteLine(myPet.Name + "'s stats");
                     petEmotion.PetStatistics();
                     Console.WriteLine("Or press 'q' to quit");
                     var input = Console.ReadLine();
@@ -52,7 +90,7 @@ namespace CyberPet
                     else if (myPet.hunger == 10)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine(myPet.name + " has ran away in search of food");
+                        Console.WriteLine(myPet.Name + " has ran away in search of food");
                         Console.ResetColor();
                         break;
                     }

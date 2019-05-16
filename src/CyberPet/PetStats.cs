@@ -6,11 +6,17 @@ namespace CyberPet
 {
     public class PetStats
     {
-        public static PetCharacter myPet = new PetCharacter();
+        private static IPet myPet;
 
+        public PetStats(IPet pet)
+        {
+            myPet = pet;
+        }
 
         public void PetStatistics()
         {
+
+
             if (myPet.energy <= 2)
             {
                 Console.ForegroundColor = ConsoleColor.Red;

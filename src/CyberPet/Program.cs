@@ -20,7 +20,9 @@ namespace CyberPet
                     if (!string.IsNullOrWhiteSpace(userName))
                     {
                         myPet.name = userName.First().ToString().ToUpper() + userName.Substring(1);
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("Congratulations, your new pet is called " + myPet.name);
+                        Console.ResetColor();
                         invalidName = false;
                     }
                     else throw new ArgumentNullException();
@@ -29,11 +31,9 @@ namespace CyberPet
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Your cyberpets name cannot be null or whitespace");
-                    Console.ResetColor();
-                    
+                    Console.ResetColor();                   
                 }
             }
-
 
             while (true)
             {             
@@ -51,7 +51,9 @@ namespace CyberPet
                     }
                     else if (myPet.hunger == 10)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine(myPet.name + " has ran away in search of food");
+                        Console.ResetColor();
                         break;
                     }
                     else if (input == "play")

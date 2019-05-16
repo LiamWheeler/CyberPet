@@ -23,14 +23,16 @@ namespace CyberPet
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("Congratulations on your new dog");
                         myPet = new Dog();
+                        PetStats PetEmotion = new PetStats(myPet);
                         Console.ResetColor();
                         hasType = true;
                     }
                     else if (species == "honey badger")
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("Congratulations on your new honey badger");
+                        Console.WriteLine("Why would you choose a pet honey badger?");
                         myPet = new HoneyBadger();
+                        PetStats PetEmotion = new PetStats(myPet);
                         Console.ResetColor();
                         hasType = true;
                     }
@@ -90,7 +92,7 @@ namespace CyberPet
                     else if (myPet.hunger == 10)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine(myPet.Name + " has ran away in search of food");
+                        Console.WriteLine(myPet.Name + " has ran away in search of food.");
                         Console.ResetColor();
                         break;
                     }

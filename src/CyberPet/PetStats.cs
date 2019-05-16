@@ -7,11 +7,13 @@ namespace CyberPet
     public class PetStats
     {
         private static IPet myPet;
+        
 
         public PetStats(IPet pet)
         {
             myPet = pet;
         }
+        
 
         public void PetStatistics()
         {

@@ -15,22 +15,39 @@ namespace CyberPet
         {
             energy = 10;
             hunger = 0;
-            happy = -10;
+            happy = 4;
         }
 
         public void Feed()
         {
-            throw new NotImplementedException();
+            if (hunger == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine(Name + " is not hungry right now");
+                Console.ResetColor();
+            }
+            else if (hunger <= 9)
+            {
+                hunger -= 2;
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine(Name + " has eaten a jar of honey ,i assume, and seems placated for now, hunger is now " + hunger);
+                Console.ResetColor();
+            }
         }
 
         public void Play()
         {
-            throw new NotImplementedException();
+            hunger += 2;
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(Name + " ignores your attempts to play with it and does whatever it wants.");
+            Console.ResetColor();
         }
 
         public void Sleep()
         {
-            throw new NotImplementedException();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(Name + " bites your arm as you attempt to put it to bed, I would probably get that checked at a hospital.");
+            Console.ResetColor();
         }
     }
 }
